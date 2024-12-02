@@ -78,6 +78,7 @@ export async function onRequest(context) {  // Contents of context object
                     return Response.redirect(url.origin + "/whitelist-on.html", 302);
                 } else {
                     //if the env variables WhiteList_Mode are not set, redirect to the image
+                    response.headers.set('content-type', 'image/webp');
                     return response;
                 }
             }
