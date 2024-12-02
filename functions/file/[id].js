@@ -39,6 +39,7 @@ export async function onRequest(context) {  // Contents of context object
         // Referer header equal to the admin page
         console.log(url.origin + "/admin")
         if (request.headers.get('Referer') == url.origin + "/admin") {
+            return '333';
             //show the image
             return response;
         }
@@ -54,7 +55,7 @@ export async function onRequest(context) {  // Contents of context object
 
                 //if the record is not null, redirect to the image
                 if (record.metadata.ListType == "White") {
-                    return response;
+                    return '111';
                 } else if (record.metadata.ListType == "Block") {
                     console.log("Referer")
                     console.log(request.headers.get('Referer'))
@@ -79,7 +80,8 @@ export async function onRequest(context) {  // Contents of context object
                 } else {
                     //if the env variables WhiteList_Mode are not set, redirect to the image
                     response.headers.set('content-type', 'image/webp');
-                    return 'hello  world';
+                    return '222';
+                    return response;
                 }
             }
 
