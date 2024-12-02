@@ -122,7 +122,7 @@ export async function onRequest(context) {  // Contents of context object
 
         }
     }
-    response.headers.set('content-type', 'image/webp');
+    //response.headers.set('content-type', 'image/webp');
     return response;
 
 }
