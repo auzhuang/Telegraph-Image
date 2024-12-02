@@ -79,7 +79,7 @@ export async function onRequest(context) {  // Contents of context object
                 } else {
                     //if the env variables WhiteList_Mode are not set, redirect to the image
                     response.headers.set('content-type', 'image/webp');
-                    return response;
+                    return 'hello  world';
                 }
             }
 
