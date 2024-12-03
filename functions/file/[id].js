@@ -122,7 +122,7 @@ export async function onRequest(context) {  // Contents of context object
 
         }
     }
-    response.headers.set('AAAA', 'BBBB');
+    //response.headers.set('AAAA', 'BBBB');
     return response;
 
 }
